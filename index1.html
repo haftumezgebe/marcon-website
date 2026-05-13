@@ -3,43 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haftu Mezgebe | Mechanical Engineer Portfolio</title>
+    <title>Haftu Mezgebe | Mechanical Engineer & Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f1f5f9; }
+        .bg-engineering {
+            background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-gray-950 text-white font-sans scroll-smooth">
+<body class="font-sans scroll-smooth bg-engineering">
 
-    <nav class="fixed w-full z-50 bg-gray-950/90 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black text-orange-500 italic uppercase tracking-tighter">HAFTU MEZGEBE</div>
-            <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <a href="#experience" class="hover:text-orange-400 transition">Work History</a>
-                <a href="#software" class="hover:text-orange-400 transition">Software Stack</a>
-                <a href="#contact" class="hover:text-orange-400 transition text-orange-500">Contact</a>
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter text-blue-500 uppercase">Haftu Mezgebe</div>
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#software" class="hover:text-blue-400 transition">Software</a>
+                <a href="#contact" class="hover:text-blue-400 transition text-blue-500">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#fb923c10_0%,transparent_50%)]"></div>
-        <div class="relative max-w-7xl mx-auto px-6">
-            <p class="text-orange-400 font-bold tracking-[0.4em] uppercase mb-6 text-sm">Mechanical Engineer Specialist</p>
-            <h1 class="text-6xl lg:text-9xl font-black leading-[0.9] mb-8 italic">PRECISION <br><span class="text-orange-500 underline decoration-white/10">ENGINEERING</span></h1>
-            <p class="text-xl text-gray-400 max-w-3xl mb-12 leading-relaxed">
-                Results-driven Mechanical Engineer with 3+ years of progressive experience in design, precision manufacturing, CNC machining, and design-to-fabrication workflows.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="tel:+251939202609" class="bg-orange-500 text-black px-10 py-5 rounded-full font-black hover:bg-orange-400 transition shadow-2xl shadow-orange-500/20 uppercase tracking-widest">Connect: +251 939 202 609</a>
+    <section class="relative pt-32 pb-20 border-b border-blue-500/20">
+        <div class="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="w-64 h-64 md:w-80 md:h-80 shrink-0">
+                <div class="w-full h-full rounded-3xl border-4 border-blue-500/40 overflow-hidden shadow-2xl">
+                    <img src="profile.jpeg" alt="Haftu Mezgebe" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="text-center md:text-left">
+                <p class="text-blue-400 font-bold tracking-widest uppercase mb-4">Mechanical Engineer | Design & Fabrication Head</p>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight uppercase text-white">
+                    Design & <br><span class="text-blue-500 underline decoration-blue-500/30 text-shadow">Engineering</span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
+                    Over 3 years of experience in manufacturing leadership. Specialized in CNC programming, mechanical design, and full-stack web development.
+                </p>
+                <a href="tel:+251939202609" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg inline-block">
+                    +251 939 202 609
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 bg-gray-900/40">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-16 border-l-8 border-orange-500 pl-6 uppercase italic">Professional Experience</h2>
-            
-            <div class="space-y-20">
-                <div class="relative pl-8 border-l border-gray-800">
-                    <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[8.5px] top-2"></div>
-                    <h3 class="text-3xl font-bold text-orange-500">Design & Fabrication Head</h3>
-                    <p class="text-gray-400 font-bold mb-6 uppercase tracking-widest">Tora Holding Company | Dec 2025 – Present</p>
-                    <p class="text-gray-300 mb-4 italic">✓ I have practical expertise in design, material selection, fabrication planning,
+    <section id="experience" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-black mb-12 border-b-4 border-blue-600 inline-block">WORK EXPERIENCE</h2>
+            <div class="space-y-12">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-white">Design and Fabrication Head</h3>
+                    <p class="text-blue-400 font-bold mb-4">Tora Holding Company | 2025 – Present</p>
+                    <p class="text-slate-300">Leading technical teams, improving production efficiency, and ensuring compliance with engineering standards.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-white">Mechanical Engineer / CNC Programmer</h3>
+                    <p class="text-blue-400 font-bold mb-4">Netsa Trading PLC | 2025</p>
+                    <p class="text-slate-300">2D/3D design for electrical enclosures and authoring optimized G-code programs.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-white">Design Engineer</h3>
+                    <p class="text-blue-400 font-bold mb-4">Minaye PLC | 2023 – 2025</p>
+                    <p class="text-slate-300">Producing standardized engineering drawings per GD&T standards in Addis Ababa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="software" class="py-24 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-black mb-12 text-center text-white">SOFTWARE PROFICIENCY</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-blue-400 font-black mb-4 uppercase text-xs">Engineering</h3>
+                    <ul class="space-y-2 font-bold">
+                        <li>SolidWorks</li>
+                        <li>AutoCAD</li>
+                        <li>CNC G & M Code</li>
+                        <li>SketchUp</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-blue-400 font-black mb-4 uppercase text-xs">Creative Design</h3>
+                    <ul class="space-y-2 font-bold">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>CorelDraw</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border-blue-500/50">
+                    <h3 class="text-blue-500 font-black mb-4 uppercase text-xs">Modern Skills</h3>
+                    <ul class="space-y-2 font-bold">
+                        <li>Web Development</li>
+                        <li>Tailwind CSS</li>
+                        <li>HTML5 / CSS3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-black mb-8 italic uppercase leading-none">Connect With Me</h2>
+            <p class="text-xl mb-12 opacity-90">B.Sc. Mechanical Engineering | Top Graduate | Mekelle, Ethiopia</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <div class="bg-black/20 p-6 rounded-2xl backdrop-blur-md">
+                    <p class="text-3xl font-black">+251 939 202 609</p>
+                </div>
+                <div class="bg-black/20 p-6 rounded-2xl backdrop-blur-md">
+                    <p class="text-xl font-bold">haftumezgebe2609@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 text-xs font-bold uppercase">
+        © 2026 Haftu Mezgebe | Mechanical Engineer & Web Developer
+    </footer>
+
+</body>
+</html>
