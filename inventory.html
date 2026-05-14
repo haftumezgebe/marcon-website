@@ -12,47 +12,25 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .bg-grid {
-            background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
-            background-size: 24px 24px;
-        }
     </style>
 </head>
-<body class="bg-grid min-h-screen font-sans">
+<body class="min-h-screen font-sans">
 
     <header class="p-6 border-b border-white/10 glass-card sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-black text-blue-500 uppercase tracking-tighter">Inventory Tracker</h1>
+                <h1 class="text-2xl font-black text-blue-500 uppercase tracking-tighter">Inventory System</h1>
                 <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Melazal Manufacturing Industry</p>
             </div>
-            <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white transition">← Back to Portfolio</a>
+            <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white transition">← Main Portfolio</a>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-6 space-y-8">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
-                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Total Items</p>
-                <p class="text-3xl font-black">128</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-yellow-500">
-                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Low Stock Alerts</p>
-                <p class="text-3xl font-black text-yellow-500">12</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-green-500">
-                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Recent Movements</p>
-                <p class="text-3xl font-black text-green-500">+14</p>
-            </div>
-        </div>
-
         <div class="glass-card rounded-2xl overflow-hidden">
             <div class="p-6 border-b border-white/10 flex justify-between items-center">
-                <h2 class="font-bold text-lg">Workshop Stock List</h2>
-                <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-bold transition">
-                    + Add New Item
-                </button>
+                <h2 class="font-bold text-lg text-white">Workshop Stock List</h2>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-left">
@@ -61,7 +39,6 @@
                             <th class="p-4">Material Name</th>
                             <th class="p-4">Specification</th>
                             <th class="p-4">Quantity</th>
-                            <th class="p-4">Status</th>
                             <th class="p-4">Actions</th>
                         </tr>
                     </thead>
@@ -69,21 +46,19 @@
                         <tr class="hover:bg-white/5 transition">
                             <td class="p-4 font-bold">Mild Steel Sheet</td>
                             <td class="p-4 text-slate-400">2.0mm x 1220 x 2440</td>
-                            <td class="p-4 font-mono text-lg text-blue-400">45 <span class="text-xs text-slate-500">Pcs</span></td>
-                            <td class="p-4"><span class="px-3 py-1 bg-green-500/10 text-green-500 rounded-full text-xs font-bold border border-green-500/20">In Stock</span></td>
-                            <td class="p-4 flex gap-2">
-                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Issue</button>
-                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Edit</button>
+                            <td class="p-4 font-mono text-lg text-blue-400"><span id="stock-1">45</span> <span class="text-xs text-slate-500">Pcs</span></td>
+                            <td class="p-4">
+                                <button onclick="updateStock('stock-1', -1)" class="bg-red-500/20 text-red-500 hover:bg-red-500 hover:text-white px-3 py-1 rounded-md text-xs font-bold transition">Issue 1</button>
+                                <button onclick="updateStock('stock-1', 1)" class="bg-green-500/20 text-green-500 hover:bg-green-500 hover:text-white px-3 py-1 rounded-md text-xs font-bold transition ml-2">Add 1</button>
                             </td>
                         </tr>
                         <tr class="hover:bg-white/5 transition">
                             <td class="p-4 font-bold">Square Tube</td>
                             <td class="p-4 text-slate-400">40mm x 40mm x 1.5mm</td>
-                            <td class="p-4 font-mono text-lg text-yellow-500">8 <span class="text-xs text-slate-500">Pcs</span></td>
-                            <td class="p-4"><span class="px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-full text-xs font-bold border border-yellow-500/20">Low Stock</span></td>
-                            <td class="p-4 flex gap-2">
-                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Issue</button>
-                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Edit</button>
+                            <td class="p-4 font-mono text-lg text-blue-400"><span id="stock-2">12</span> <span class="text-xs text-slate-500">Pcs</span></td>
+                            <td class="p-4">
+                                <button onclick="updateStock('stock-2', -1)" class="bg-red-500/20 text-red-500 hover:bg-red-500 hover:text-white px-3 py-1 rounded-md text-xs font-bold transition">Issue 1</button>
+                                <button onclick="updateStock('stock-2', 1)" class="bg-green-500/20 text-green-500 hover:bg-green-500 hover:text-white px-3 py-1 rounded-md text-xs font-bold transition ml-2">Add 1</button>
                             </td>
                         </tr>
                     </tbody>
@@ -92,9 +67,25 @@
         </div>
     </main>
 
-    <footer class="p-12 text-center text-slate-600 text-xs font-bold tracking-widest uppercase">
-        Digital Inventory System v1.0 | Developed by Haftu Mezgebe g
-    </footer>
+    <script>
+        function updateStock(id, change) {
+            const stockElement = document.getElementById(id);
+            let currentStock = parseInt(stockElement.innerText);
+            let newStock = currentStock + change;
 
+            if (newStock < 0) {
+                alert("Insufficient Stock!");
+            } else {
+                stockElement.innerText = newStock;
+                
+                // Visual feedback for low stock
+                if (newStock < 5) {
+                    stockElement.parentElement.classList.replace('text-blue-400', 'text-red-500');
+                } else {
+                    stockElement.parentElement.classList.replace('text-red-500', 'text-blue-400');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
