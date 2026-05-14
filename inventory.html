@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Inventory | Melazal Manufacturing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f1f5f9; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-grid min-h-screen font-sans">
+
+    <header class="p-6 border-b border-white/10 glass-card sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-black text-blue-500 uppercase tracking-tighter">Inventory Tracker</h1>
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Melazal Manufacturing Industry</p>
+            </div>
+            <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white transition">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 space-y-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Total Items</p>
+                <p class="text-3xl font-black">128</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-yellow-500">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Low Stock Alerts</p>
+                <p class="text-3xl font-black text-yellow-500">12</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-green-500">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Recent Movements</p>
+                <p class="text-3xl font-black text-green-500">+14</p>
+            </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h2 class="font-bold text-lg">Workshop Stock List</h2>
+                <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-bold transition">
+                    + Add New Item
+                </button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-800/50 text-xs uppercase tracking-widest text-slate-400">
+                        <tr>
+                            <th class="p-4">Material Name</th>
+                            <th class="p-4">Specification</th>
+                            <th class="p-4">Quantity</th>
+                            <th class="p-4">Status</th>
+                            <th class="p-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-white/5">
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-4 font-bold">Mild Steel Sheet</td>
+                            <td class="p-4 text-slate-400">2.0mm x 1220 x 2440</td>
+                            <td class="p-4 font-mono text-lg text-blue-400">45 <span class="text-xs text-slate-500">Pcs</span></td>
+                            <td class="p-4"><span class="px-3 py-1 bg-green-500/10 text-green-500 rounded-full text-xs font-bold border border-green-500/20">In Stock</span></td>
+                            <td class="p-4 flex gap-2">
+                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Issue</button>
+                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Edit</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-4 font-bold">Square Tube</td>
+                            <td class="p-4 text-slate-400">40mm x 40mm x 1.5mm</td>
+                            <td class="p-4 font-mono text-lg text-yellow-500">8 <span class="text-xs text-slate-500">Pcs</span></td>
+                            <td class="p-4"><span class="px-3 py-1 bg-yellow-500/10 text-yellow-500 rounded-full text-xs font-bold border border-yellow-500/20">Low Stock</span></td>
+                            <td class="p-4 flex gap-2">
+                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Issue</button>
+                                <button class="bg-slate-700 hover:bg-slate-600 p-2 rounded-lg transition text-xs font-bold">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-12 text-center text-slate-600 text-xs font-bold tracking-widest uppercase">
+        Digital Inventory System v1.0 | Developed by Haftu Mezgebe
+    </footer>
+
+</body>
+</html>
